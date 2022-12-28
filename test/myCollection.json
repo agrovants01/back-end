@@ -1,0 +1,20 @@
+[
+    {
+        "url": "http://localhost:3000/api/usuario",
+        "nombreUsuario": "juan",
+        "apellidoUsuario": "carlos",
+        "emailUsuario": "juancarlos@hotmail.com",
+        "contraseniaUsuario": "1234567",
+        "telefonoUsuario": "424212121",
+        "fk_Perfil": "1111"
+    },
+    {
+        "url": "http://localhost:3000/api/usuario",
+        "nombreUsuario": "roberto",
+        "apellidoUsuario": "carlos",
+        "emailUsuario": "roberticarlos@hotmail.com",
+        "contraseniaUsuario": "1234567",
+        "telefonoUsuario": "424212121",
+        "fk_Perfil": "1111"
+    }
+]

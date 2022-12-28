@@ -1,0 +1,260 @@
+{
+  "info": {
+    "_postman_id": "0db59bcb-9647-4cd7-aef6-163763b5e29c",
+    "name": "Agrovants-test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "test getAll",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "pm.test(\"Test data type of the response\", () => {\r",
+              "    pm.expect(jsonData).to.be.a(\"array\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test data no empty\", () => {\r",
+              "    pm.expect(jsonData).to.be.not.empty;\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/usuario",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "usuario"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test getOne",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "pm.test(\"Test data type of the response\", () => {\r",
+              "    pm.expect(jsonData).to.be.a(\"object\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test data no empty\", () => {\r",
+              "    pm.expect(jsonData).to.be.not.empty;\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/usuario/getById/OCfKmvpjOITjaEu8tbsF8",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "usuario", "getById", "OCfKmvpjOITjaEu8tbsF8"],
+          "query": [
+            {
+              "key": "",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test destroy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});\r",
+              "//esto es únicamente para signup\r",
+              "const jsonData = pm.response.json();\r",
+              "pm.test(\"Test data type of the response\", () => {\r",
+              "    pm.expect(jsonData).to.be.a(\"string\");\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/indice/JgnpTRLo_qjzWgrazPIeB",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "indice", "JgnpTRLo_qjzWgrazPIeB"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test darBaja",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "pm.test(\"Test data type of the response\", () => {\r",
+              "    pm.expect(jsonData).to.be.a(\"object\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test data no empty\", () => {\r",
+              "    pm.expect(jsonData).to.be.not.empty;\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/usuario/getById/OCfKmvpjOITjaEu8tbsF8",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "usuario", "getById", "OCfKmvpjOITjaEu8tbsF8"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test update",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "pm.test(\"Test data type of the response\", () => {\r",
+              "    pm.expect(jsonData).to.be.a(\"object\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test data no empty\", () => {\r",
+              "    pm.expect(jsonData).to.be.not.empty;\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/usuario/getById/hicyq6pr9VYM1sbatUS5c",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "usuario", "getById", "hicyq6pr9VYM1sbatUS5c"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test post signup",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});\r",
+              "//esto es únicamente para signup\r",
+              "const jsonData = pm.response.json();\r",
+              "pm.test(\"Test data type of the response\", () => {\r",
+              "    pm.expect(jsonData.token).to.be.a(\"string\");\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombreUsuario\": \"roberto\",\r\n    \"apellidoUsuario\": \"carlos\",\r\n    \"emailUsuario\": \"robertocarlos@hotmail.com\",\r\n    \"contraseniaUsuario\": \"1234567\",\r\n    \"telefonoUsuario\": \"424212121\",\r\n    \"fk_Perfil\": \"1111\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/usuario",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "usuario"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
